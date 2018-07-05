@@ -85,10 +85,12 @@ def convert(input):
     output = re.sub(u'\u103E\u103B', u'\u103B' + u'\u103E', output)
     # yapit-hahtoe
 
+
     output = re.sub(u'\u1064', u'\u1004\u103A\u1039', output)
     # up-ngathet
     output = re.sub(u'\u104E', u'\u104E\u1004\u103A\u1038', output)
     #  la-gaung
+
 
     ########
 
@@ -145,10 +147,12 @@ def convert(input):
     # htawon
     output = re.sub(u'\u1097', u'\u100B\u1039\u100B', output)
     # tatalin
-    output = re.sub(u'\u106F', u'\u100E\u1039\u100D', output)
-    # dayin-kaut
-    output = re.sub(u'\u106E', u'\u100D\u1039\u100D', output)
+    output = re.sub(u'\u106F', u'\u100D\u1039\u100E', output)
     # dayin-hmote
+    output = re.sub(u'\u106E', u'\u100D\u1039\u100D', output)
+    # dayin-kaut
+
+
 
     ############## Pattern
 
