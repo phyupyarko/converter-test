@@ -22,8 +22,8 @@
       <file leaf-file-name="zg2uni.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zg2uni.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="87" selection-start-line="87" selection-end-line="87" />
+            <state relative-caret-position="253">
+              <caret line="87" column="67" selection-start-line="87" selection-start-column="67" selection-end-line="87" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -46,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
-              <caret line="105" selection-start-line="105" selection-end-line="105" />
+              <caret line="265" selection-start-line="265" selection-end-line="265" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -354,15 +354,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zg2uni.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        <state relative-caret-position="253">
+          <caret line="87" column="67" selection-start-line="87" selection-start-column="67" selection-end-line="87" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
-          <caret line="105" selection-start-line="105" selection-end-line="105" />
+          <caret line="265" selection-start-line="265" selection-end-line="265" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

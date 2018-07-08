@@ -75,6 +75,8 @@ def decompose(input):
     #  hahtoe1chaung
     output = re.sub(u'\u1089', u'\u103E' + u'\u1030', output)
     #  hahtoe2chaung
+    output = re.sub(u'\u103E\u103B', u'\u103B' + u'\u103E', output)
+    # yapit-hahtoe
     output = re.sub(u'\u108E', u'\u102D' + u'\u1036', output)
     #  lgt-ttt
     output = re.sub(u'\u108B', u'\u1004' + u'\u103A' + u'\u1039' + u'\u102D', output)
@@ -83,8 +85,7 @@ def decompose(input):
     #  ngathet-lgtsk
     output = re.sub(u'\u108B', u'\u1004' + u'\u103A' + u'\u1039' + u'\u1036', output)
     #  ngathet-ttt
-    output = re.sub(u'\u103E\u103B', u'\u103B' + u'\u103E', output)
-    # yapit-hahtoe
+    output = re.sub(u'\u1025(?=[\u103a\u102c])', u'\u1009', output)
 
 
     ######  pat-sint
