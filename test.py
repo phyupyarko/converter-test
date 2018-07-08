@@ -9,6 +9,7 @@ class TestZG2UNI(unittest.TestCase):
         self.assertEqual(unicode, result, "Failed converting Article One")
 
 
+
     def test_article_two(self):
         zawgyi = u'''ကခဂငစဆဇည ဋဌဍ ဏတထဒဓနပဖဗဘမ ယရလ၀သဟ ဠအ'''
         unicode = u'''ကခဂငစဆဇည ဋဌဍ ဏတထဒဓနပဖဗဘမ ယရလ၀သဟ ဠအ'''
