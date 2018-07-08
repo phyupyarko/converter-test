@@ -2,7 +2,8 @@
 import re
 
 
-def convert(input):
+
+def replace(input):
     output = input
     output = output.replace(u'\u106A', u'\u1009')
     #  nyalay
@@ -54,17 +55,17 @@ def convert(input):
 
     output = output.replace(u'\u1094', u'\u1037')
     output = output.replace(u'\u1095', u'\u1037')
-    # outkamyint
-
-    output = output.replace(u"\u1086", u"\u103F")
+    # out-kamyit
+    output = output.replace(u'\u1086', u'\u103F')
     #  thagyi
+    output = re.sub(u'\u1064', u'\u1004\u103A\u1039', output)
+    # up-ngathet
+    output = re.sub(u'\u104E', u'\u104E\u1004\u103A\u1038', output)
+    #  la-gaung
+    return output
 
-
-
-
-
-
-    ##########
+def decompose(input):
+    output = input
 
     output = re.sub(u'\u105A', u'\u102B' + u'\u103A', output)
     #  yaychar-htoe
@@ -85,14 +86,7 @@ def convert(input):
     output = re.sub(u'\u103E\u103B', u'\u103B' + u'\u103E', output)
     # yapit-hahtoe
 
-
-    output = re.sub(u'\u1064', u'\u1004\u103A\u1039', output)
-    # up-ngathet
-    output = re.sub(u'\u104E', u'\u104E\u1004\u103A\u1038', output)
-    #  la-gaung
-
-
-    ########
+    ######  pat-sint
 
     output = re.sub(u'\u1060', u'\u1039\u1000', output)
     # ka
@@ -151,16 +145,27 @@ def convert(input):
     # dayin-hmote
     output = re.sub(u'\u106E', u'\u100D\u1039\u100D', output)
     # dayin-kaut
+    return output
 
 
 
-    ############## Pattern
 
+
+def visual2logical(input):
+    output = input
     output = re.sub(
         u'((?:\u1031)?)((?:\u103c)?)([\u1000-\u1021])((?:\u103b)?)((?:\u103d)?)((?:\u103e)?)((?:\u1037)?)((?:\u102c)?)',
         '\\3\\2\\4\\5\\6\\1\\7\\8', output)
 
+    return output
 
+
+def convert(input):
+    output = input
+
+    output = replace(output)
+    output = decompose(output)
+    output = visual2logical(output)
 
     return output
 
