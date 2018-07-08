@@ -86,6 +86,7 @@ def decompose(input):
     output = re.sub(u'\u103E\u103B', u'\u103B' + u'\u103E', output)
     # yapit-hahtoe
 
+
     ######  pat-sint
 
     output = re.sub(u'\u1060', u'\u1039\u1000', output)
