@@ -58,15 +58,18 @@ def replace(input):
     # out-kamyit
     output = output.replace(u'\u1086', u'\u103F')
     #  thagyi
-    output = re.sub(u'\u1064', u'\u1004\u103A\u1039', output)
-    # up-ngathet
-    output = re.sub(u'\u104E', u'\u104E\u1004\u103A\u1038', output)
-    #  la-gaung
+
     return output
 
 def decompose(input):
     output = input
 
+    output = re.sub(u'([\u1000-\u1021])\u1064', u'\u1064\\1', output)
+
+    output = re.sub(u'\u1064', u'\u1004\u103A\u1039', output)
+    # up-ngathet
+    output = re.sub(u'\u104E', u'\u104E\u1004\u103A\u1038', output)
+    #  la-gaung
     output = re.sub(u'\u105A', u'\u102B' + u'\u103A', output)
     #  yaychar-htoe
     output = re.sub(u'\u108A', u'\u103D' + u'\u103E', output)
