@@ -360,6 +360,5 @@ class TestZG2UNI(unittest.TestCase):
         self.assertEqual(unicode, result, "Failed converting Article Pangram")
 
 
-
 if __name__ == "__main__":
     unittest.main()

@@ -5,8 +5,6 @@
 
 import codecs
 import zg2uni
-import uni2zg
-import win2uni
 import sys
 
 input_file_name = sys.argv[1]
@@ -18,18 +16,6 @@ for input_line in input_file:
   input_line = zg2uni.convert(input_line)
   output_file.write(input_line)
   output_file.flush()
-
-for input_line in input_file:
-  input_line = uni2zg.convert(input_line)
-  output_file.write(input_line)
-  output_file.flush()
-
-for input_line in input_file:
-  input_line = win2uni.convert(input_line)
-  output_file.write(input_line)
-  output_file.flush()
-
-
 
 input_file.close()
 output_file.close()
