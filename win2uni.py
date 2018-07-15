@@ -155,7 +155,7 @@ def decompose(input):
     # ga-nge
     output = re.sub(u'\u00A2', u'\u1039\u1003', output)
     # ga-gyi
-    output = re.sub(u'\u1065', u'\u1039\u1005', output)
+    output = re.sub(u'\u00F6', u'\u1039\u1005', output)
     # sa-lone
     output = re.sub(u'\u00E4', u'\u1039\u1006', output)
     # sa-lane

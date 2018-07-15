@@ -311,6 +311,53 @@ class TestWIN2UNI(unittest.TestCase):
         result = win2uni.convert(win)
         self.assertEqual(unicode, result, "Failed to Convert Article TwentyFive")
 
+    def test_article_twentysix(self):
+        win = u'''tydk'f 26
+        vlwdkif;onf ynmoif ,ledkifcGihf&Sdonf? tenf;qkH;rlvwef;eSihf tajccH tqihf twef;rsm;wGif ynm oifjum;a&;onf tcrJhjzpf&rnf/ 
+        rlvwef;ynmonf roifrae& ynm jzpf&rnf/ pufrIvufrIynmeSihf toufarG;rI ynmrsm;udk a,bl,stm;jzihf oifjum;&,l edkifap&rnf/ 
+        xdkhjyif txufwef;ynmtwGuf t&nftcsif;udk tajccHjykí wlnDaom tcGihfta&; &&Sdap&rnf/
+        ynmoifjum;a&;udk vlom;wdkh\ p&dkufvu©Pm tjynhft0 wdk;wufrI tjyif? vlhtcGihfta&;eSihf tajccHvGwfvyfcGihf &dkao av;pm;rI wdkhudk &SifoefzGHhjzdk;vmap&ef &nf&G,fí oifjum; ap&rnf/ 
+        ynmoifjum;a&;onf edkifiH tm;vkH; wdkhwGif vnf;aumif;? vlrsdk;pkrsm; wGifvnf;aumif;? bmoma&;toif;tzGJhrsm;wGif vnf;aumif;? 
+        tcsif;csif;em;vnfrI? onf;cH rIeSihf cifrif&if;eSD;rIwdkhudk tm;ay;&rnf/ 
+        xdkhjyif jidrf;csrf;a&; wnfwHhatmif aqmif&Guf&ef tvdkhiSg? ukvor*¾\ aqmif&GufrIrsm;udkvnf; jzpfajrmuf atmif tm;ay;&rnf/
+        rdbwdkhwGif? rdrdwdkh\ uav;rsm; oif,l&rnhfynm trsdk;tpm;udk a&G;cs,fedkifaom vufOD; tcGihfta&;&Sdonf/'''
+        unicode = u'''အပိုဒ် ၂၆
+        လူတိုင်းသည် ပညာသင် ယူနိုင်ခွင့်ရှိသည်၊ အနည်းဆုံးမူလတန်းနှင့် အခြေခံ အဆင့် အတန်းများတွင် ပညာ သင်ကြားရေးသည် အခမဲ့ဖြစ်ရမည်။ 
+        မူလတန်းပညာသည် မသင်မနေရ ပညာ ဖြစ်ရမည်။ စက်မှုလက်မှုပညာနှင့် အသက်မွေးမှု ပညာများကို ယေဘူယျအားဖြင့် သင်ကြားရယူ နိုင်စေရမည်။ 
+        ထို့ပြင် အထက်တန်းပညာအတွက် အရည်အချင်းကို အခြေခံပြု၍ တူညီသော အခွင့်အရေး ရရှိစေရမည်။
+        ပညာသင်ကြားရေးကို လူသားတို့၏ စရိုက်လက္ခဏာ အပြည့်အဝ တိုးတက်မှု အပြင်၊ လူ့အခွင့်အရေးနှင့် အခြေခံလွတ်လပ်ခွင့် ရိုသေ လေးစားမှု တို့ကို ရှင်သန်ဖွံ့ဖြိုးလာစေရန် ရည်ရွယ်၍ သင်ကြား စေရမည်။ 
+        ပညာသင်ကြားရေးသည် နိုင်ငံ အားလုံး တို့တွင် လည်းကောင်း၊ လူမျိုးစုများ တွင်လည်းကောင်း၊ ဘာသာရေးအသင်းအဖွဲ့များတွင် လည်းကောင်း၊ 
+        အချင်းချင်းနားလည်မှု၊ သည်းခံ မှုနှင့် ခင်မင်ရင်းနှီးမှုတို့ကို အားပေးရမည်။ 
+        ထို့ပြင် ငြိမ်းချမ်းရေး တည်တံ့အောင် ဆောင်ရွက်ရန် အလို့ငှါ၊ ကုလသမဂ္ဂ၏ ဆောင်ရွက်မှုများကိုလည်း ဖြစ်မြောက် အောင် အားပေးရမည်။
+        မိဘတို့တွင်၊ မိမိတို့၏ ကလေးများ သင်ယူရမည့်ပညာ အမျိုးအစားကို ရွေးချယ်နိုင်သော လက်ဦး အခွင့်အရေးရှိသည်။'''
+        result = win2uni.convert(win)
+        self.assertEqual(unicode, result, "Failed to Convert Article TwentySix")
+
+    def test_article_twentyseven(self):
+        win = u'''tydk'f 27
+        vlwdkif;wGif oufqdkif&m ,Úfaus;rI avmuü vGwfvyfpGm yg0ifaqmif &GufedkifcGihf okckrynm&yf rsm;udkvGwfvyfpGmvdkufpm; arGhavsmfedkifcGihf? 
+        odyÜH ynmxGef;um;a&; vkyfief;rsm;wGif vGwfvyfpGm 0ifa&muf vkyfudkif edkifcGihfeSihf xdkynm\ tusdk; tmedoifrsm;udk vGwfvyfpGm cHpm;okH;pGJedkifcGihf &Sdonf/
+        vlwdkif;wGif odyÜHrS jzpfap? pmayrSjzpfap? okckrynmrS jzpfap? rdrdudk,fydkifÚmPfjzihfjuHpnf zefwD;rIrS 
+        jzpfxGef;vmonhf *kPfeSihf aiGaju; tusdk;tjrwfrsm;udk cHpm;&,ledkif&ef tcGihfta&; twGuf umuG,frIudk &&Sd&ef tcGihfta&; &Sdonf/'''
+        unicode = u'''အပိုဒ် ၂၇
+        လူတိုင်းတွင် သက်ဆိုင်ရာ ယဉ်ကျေးမှု လောက၌ လွတ်လပ်စွာ ပါဝင်ဆောင် ရွက်နိုင်ခွင့် သုခုမပညာရပ် များကိုလွတ်လပ်စွာလိုက်စား မွေ့လျော်နိုင်ခွင့်၊ 
+        သိပ္ပံ ပညာထွန်းကားရေး လုပ်ငန်းများတွင် လွတ်လပ်စွာ ဝင်ရောက် လုပ်ကိုင် နိုင်ခွင့်နှင့် ထိုပညာ၏ အကျိုး အာနိသင်များကို လွတ်လပ်စွာ ခံစားသုံးစွဲနိုင်ခွင့် ရှိသည်။
+        လူတိုင်းတွင် သိပ္ပံမှ ဖြစ်စေ၊ စာပေမှဖြစ်စေ၊ သုခုမပညာမှ ဖြစ်စေ၊ မိမိကိုယ်ပိုင်ဉာဏ်ဖြင့်ကြံစည် ဖန်တီးမှုမှ 
+        ဖြစ်ထွန်းလာသည့် ဂုဏ်နှင့် ငွေကြေး အကျိုးအမြတ်များကို ခံစားရယူနိုင်ရန် အခွင့်အရေး အတွက် ကာကွယ်မှုကို ရရှိရန် အခွင့်အရေး ရှိသည်။'''
+        result = win2uni.convert(win)
+        self.assertEqual(unicode, result, "Failed to Convert Article TwentySeven")
+
+
+    def test_article_twentyeight(self):
+        win = u'''tydk'f 28
+        vlwdkif;onf þajunm pmwrf;wGif azmfjyxm;onhf tcGihfta&;rsm; eSihf vGwfvyfcGihfrsm;udk tjynhftpkH &,ledkifaom 
+        vlrI qufqHa&; tajctaeeSihf tjynfjynfqdkif&m qufqHa&; tajctaewdkh\ tusdk;aus;Zl;udk cHpm;edkifcGihf &Sdonf/'''
+        unicode = u'''အပိုဒ် ၂၈
+        လူတိုင်းသည် ဤကြေညာ စာတမ်းတွင် ဖော်ပြထားသည့် အခွင့်အရေးများ နှင့် လွတ်လပ်ခွင့်များကို အပြည့်အစုံ ရယူနိုင်သော 
+        လူမှု ဆက်ဆံရေး အခြေအနေနှင့် အပြည်ပြည်ဆိုင်ရာ ဆက်ဆံရေး အခြေအနေတို့၏ အကျိုးကျေးဇူးကို ခံစားနိုင်ခွင့် ရှိသည်။'''
+        result = win2uni.convert(win)
+        self.assertEqual(unicode, result, "Failed to Convert Article TwentyEight")
+
     def test_myanmar_pangram(self):
         win = u'''oD[dkVfrS ÓPfBuD;½§ifonf tm,k0¹eaq;ñTef;pmudk ZvGefaps;ab;Am'Hyifxuf'''
         unicode = u'''သီဟိုဠ်မှ ဉာဏ်ကြီးရှင်သည် အာယုဝဍ္ဎနဆေးညွှန်းစာကို ဇလွန်ဈေးဘေးဗာဒံပင်ထက်'''
