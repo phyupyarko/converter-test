@@ -2,7 +2,7 @@
 import re
 
 
-def convert(input):
+def replace(input):
     output = input
     output = output.replace(u'\u004F', u'\u1025')  # nya-lay
     output = output.replace(u'\u00CD', u'\u1009')  # nya-lay
@@ -39,6 +39,7 @@ def convert(input):
     output = output.replace(u'\u0026', u'\u101B')  # ya-kaut
     output = output.replace(u'\u00BD', u'\u101B')  # ya-kaut
     output = output.replace(u'\u0076', u'\u101C')  # la
+    output = output.replace(u'\u0030', u'\u101D')  # wa
     output = output.replace(u'\u006F', u'\u101E')  # tha
     output = output.replace(u'\u005B', u'\u101F')  # ha
     output = output.replace(u'\u0056', u'\u1020')  # la-gyi
@@ -52,9 +53,8 @@ def convert(input):
     output = output.replace(u'\u00A4', u'\u104E')  # la-gaung
     output = output.replace(u'\u005C', u'\u104F')  # ei
     output = output.replace(u'\u00F3', u'\u103F')  # tha-gyi
+    ########### numbers
 
-    output = output.replace(u'\u0030', u'\u101D')  # wa
-    output = output.replace(u'\u0030', u'\u1040')  # 0
     output = output.replace(u'\u0031', u'\u1041')  # 1
     output = output.replace(u'\u0032', u'\u1042')  # 2
     output = output.replace(u'\u0033', u'\u1043')  # 3
@@ -97,10 +97,13 @@ def convert(input):
     output = output.replace(u'\u00A7', u'\u103E')  # ha-htoe
     output = output.replace(u'\u0053', u'\u103E')  # ha-htoe
 
+    return output
+
+
+def decompose(input):
+    output = input
     output = re.sub(u'\u0070\u0073', u'\u1008', output)  # za-myin-zwe
     output = re.sub(u'\u1005\u103b', u'\u1008', output)  # za-myin-zwe
-
-##########################
 
     output = re.sub(u'\u0046', u'\u1004\u103A\u1039', output)
     # up-ngathet
@@ -132,10 +135,12 @@ def convert(input):
     # yayit-1chaung
     output = re.sub(u'\u00D3', u'\u1009' + u'\u102C', output)  # nya-lay-yaychar
 
+    output = re.sub(u'\u004F\u0044', u'\u1025\u102E', output)  # nya-lay-lgtsk
+    output = re.sub(u'\u1025\u102E', u'\u1026', output)  # nya-lay-lgtsk
+    output = re.sub(u'\u004F\u0044', u'\u1026', output)  # nya-lay-lgtsk
 
+    ################ patsit
 
-
-############### patsit
     output = re.sub(u'\u00FA', u'\u1039\u1000', output)
     # ka
     output = re.sub(u'\u00A9', u'\u1039\u1001', output)
@@ -194,9 +199,25 @@ def convert(input):
     output = re.sub(u'\u00D7', u'\u100D\u1039\u100D', output)
     # dayin-kaut
 
+    return output
+
+def visual2logical(input):
+    output = input
+
     output = re.sub(
         u'((?:\u1031)?)((?:\u103c)?)([\u1000-\u1021])((?:\u103b)?)((?:\u103d)?)((?:\u103e)?)((?:\u1037)?)((?:\u102c)?)',
         '\\3\\2\\4\\5\\6\\1\\7\\8', output)
 
     return output
+
+
+def convert(input):
+    output = input
+
+    output = replace(output)
+    output = decompose(output)
+    output = visual2logical(output)
+
+    return output
+
 
