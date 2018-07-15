@@ -17,6 +17,28 @@ class TestWIN2UNI(unittest.TestCase):
         result = win2uni.convert(win)
         self.assertEqual(unicode, result, "Failed converting article One")
 
+    def test_article_two(self):
+        win = u'''tydk'f 2
+        vlwdkif;onf vlhtcGihf ta&; ajunmpmwrf;wGif azmfjyxm;onhf tcGihfta&; tm;vkH;? vGwfvyfcGihf tm;vkH;wdkhudk ydkifqdkif cHpm;cGihf&Sdonf/ 
+        vlrsdk;eG,ftm;jzihf jzpfap? tom;ta&miftm;jzihf jzpfap? usm;? r? obm0tm;jzihf jzpfap? bmompum;tm;jzihf jzpfap? udk;uG,fonhf bmomtm;jzihf jzpfap? 
+        edkifiHa&;,lqcsuf? odkhwnf;r[kwf tjcm;,lqcsuftm;jzihf jzpfap? edkifiHeSihf qdkifaom? odkhwnf;r[kwf vlrItqihftwef;eSihf qdkifaom Zpfjrpf tm;jzihfjzpfap? 
+        ypönf; Opöm *kPftm;jzihf jzpfap? rsdk;&dk;Zmwdtm;jzihf jzpfap? tjcm; tqihftwef; tm;jzihf jzpfap cGJjcm;jcif;r&Sdap&/ xdkhjyif vlwpfOD; wpfa,muf aexdkif&m 
+        edkifiH\ odkhwnf;r[kwf e,fajra'o\ edkifiHa&;qdkif&m jzpfap pD&ifydkifcGihfqdkif&m jzpfap wdkif;jynf tcsif;csif; qdkif&mjzpfap? 
+        tqihftwef; wpfckckudk tajcjykí aomfvnf;aumif;? a'oe,fajrwpfckonf tcskyftjcm tmPmydkif vGwfvyfonhf e,fajr? odkhwnf;r[kwf ukvor*¾ 
+        xdef;odrf; apmihfa&Smuf xm;&onhf e,fajr? odkhwnf;r[kwf udk,fydkif tkyfcskyfcGihf tmPmwdkh wpdwfwa'oavmufom &&Sdonhf e,fajr pojzihf 
+        ,if;odkh aom e,fajrrsm; jzpfonf [laom tajumif;udk taxmuftxm; jykí aomfvnf;aumif; cGJjcm;jcif; vkH;0 r&Sdap&/'''
+        unicode = u'''အပိုဒ် ၂
+        လူတိုင်းသည် လူ့အခွင့် အရေး ကြေညာစာတမ်းတွင် ဖော်ပြထားသည့် အခွင့်အရေး အားလုံး၊ လွတ်လပ်ခွင့် အားလုံးတို့ကို ပိုင်ဆိုင် ခံစားခွင့်ရှိသည်။ 
+        လူမျိုးနွယ်အားဖြင့် ဖြစ်စေ၊ အသားအရောင်အားဖြင့် ဖြစ်စေ၊ ကျား၊ မ၊ သဘာဝအားဖြင့် ဖြစ်စေ၊ ဘာသာစကားအားဖြင့် ဖြစ်စေ၊ ကိုးကွယ်သည့် ဘာသာအားဖြင့် ဖြစ်စေ၊ 
+        နိုင်ငံရေးယူဆချက်၊ သို့တည်းမဟုတ် အခြားယူဆချက်အားဖြင့် ဖြစ်စေ၊ နိုင်ငံနှင့် ဆိုင်သော၊ သို့တည်းမဟုတ် လူမှုအဆင့်အတန်းနှင့် ဆိုင်သော ဇစ်မြစ် အားဖြင့်ဖြစ်စေ၊ 
+        ပစ္စည်း ဥစ္စာ ဂုဏ်အားဖြင့် ဖြစ်စေ၊ မျိုးရိုးဇာတိအားဖြင့် ဖြစ်စေ၊ အခြား အဆင့်အတန်း အားဖြင့် ဖြစ်စေ ခွဲခြားခြင်းမရှိစေရ။ ထို့ပြင် လူတစ်ဦး တစ်ယောက် နေထိုင်ရာ 
+        နိုင်ငံ၏ သို့တည်းမဟုတ် နယ်မြေဒေသ၏ နိုင်ငံရေးဆိုင်ရာ ဖြစ်စေ စီရင်ပိုင်ခွင့်ဆိုင်ရာ ဖြစ်စေ တိုင်းပြည် အချင်းချင်း ဆိုင်ရာဖြစ်စေ၊ 
+        အဆင့်အတန်း တစ်ခုခုကို အခြေပြု၍ သော်လည်းကောင်း၊ ဒေသနယ်မြေတစ်ခုသည် အချုပ်အခြာ အာဏာပိုင် လွတ်လပ်သည့် နယ်မြေ၊ သို့တည်းမဟုတ် ကုလသမဂ္ဂ 
+        ထိန်းသိမ်း စောင့်ရှောက် ထားရသည့် နယ်မြေ၊ သို့တည်းမဟုတ် ကိုယ်ပိုင် အုပ်ချုပ်ခွင့် အာဏာတို့ တစိတ်တဒေသလောက်သာ ရရှိသည့် နယ်မြေ စသဖြင့် 
+        ယင်းသို့ သော နယ်မြေများ ဖြစ်သည် ဟူသော အကြောင်းကို အထောက်အထား ပြု၍ သော်လည်းကောင်း ခွဲခြားခြင်း လုံးဝ မရှိစေရ။'''
+        result = win2uni.convert(win)
+        self.assertEqual(unicode, result, "Failed to Convert Article Two")
+
     def test_article_three(self):
         win = u'''tydk'f 3
         vlwdkif;ü touf&Sif&ef vGwfvyfrIcGihfeSihf vkHjckHpdwfcscGihf &Sdonf/'''
@@ -24,12 +46,6 @@ class TestWIN2UNI(unittest.TestCase):
         လူတိုင်း၌ အသက်ရှင်ရန် လွတ်လပ်မှုခွင့်နှင့် လုံခြုံစိတ်ချခွင့် ရှိသည်။'''
         result = win2uni.convert(win)
         self.assertEqual(unicode, result, "Failed converting article Three")
-
-    def test_article_Two(self):
-        win = u'''OD;'''
-        unicode = u'''ဦး'''
-        result = win2uni.convert(win)
-        self.assertEqual(unicode, result, "Failed converting article Two")
 
     def test_article_Four(self):
         win = u'''tydk'f 4
@@ -199,6 +215,16 @@ class TestWIN2UNI(unittest.TestCase):
         result = win2uni.convert(win)
         self.assertEqual(unicode, result, "Failed to Convert Article Sixteen")
 
+    def test_article_seventeen(self):
+        win = u'''tydk'f 17
+        vlwdkif;wGif rdrd wpfOD;csif;aomfvnf;aumif; ? tjcm;olrsm;eSihf zufpyfí aomfvnf;aumif;? ypönf;Opöm wdkhudk ydkifqdkif&ef tcGihfta&;&Sd&rnf/ 
+        Oya't& r[kwfvsSif? rnfolrsS rdrd\ypönf;OpömydkifqdkifcGihfudk pGehfvGSwfjcif; rcHap&/'''
+        unicode = u'''အပိုဒ် ၁၇
+        လူတိုင်းတွင် မိမိ တစ်ဦးချင်းသော်လည်းကောင်း ၊ အခြားသူများနှင့် ဖက်စပ်၍ သော်လည်းကောင်း၊ ပစ္စည်းဥစ္စာ တို့ကို ပိုင်ဆိုင်ရန် အခွင့်အရေးရှိရမည်။ 
+        ဥပဒေအရ မဟုတ်လျှင်၊ မည်သူမျှ မိမိ၏ပစ္စည်းဥစ္စာပိုင်ဆိုင်ခွင့်ကို စွန့်လွှတ်ခြင်း မခံစေရ။'''
+        result = win2uni.convert(win)
+        self.assertEqual(unicode, result, "Failed to Convert Article Seventeen")
+
     def test_article_eighteen(self):
         win = u'''tydk'f 18
         vlwdkif;wGif vGwfvyfpGm awG;ac: juHqedkifcGihf? vGwfvyfpGm cH,l&yfwnfedkifcGihf eSihf vGwfvyfpGm ouf0if udk;uG,fedkifcGihf&Sdonf/ 
@@ -347,7 +373,6 @@ class TestWIN2UNI(unittest.TestCase):
         result = win2uni.convert(win)
         self.assertEqual(unicode, result, "Failed to Convert Article TwentySeven")
 
-
     def test_article_twentyeight(self):
         win = u'''tydk'f 28
         vlwdkif;onf þajunm pmwrf;wGif azmfjyxm;onhf tcGihfta&;rsm; eSihf vGwfvyfcGihfrsm;udk tjynhftpkH &,ledkifaom 
@@ -357,6 +382,36 @@ class TestWIN2UNI(unittest.TestCase):
         လူမှု ဆက်ဆံရေး အခြေအနေနှင့် အပြည်ပြည်ဆိုင်ရာ ဆက်ဆံရေး အခြေအနေတို့၏ အကျိုးကျေးဇူးကို ခံစားနိုင်ခွင့် ရှိသည်။'''
         result = win2uni.convert(win)
         self.assertEqual(unicode, result, "Failed to Convert Article TwentyEight")
+
+    def test_article_twentynine(self):
+        win = u'''tydk'f 29
+        rdrd\p&dkufvu©Pm vGwfvyfpGm zGHhjzdk; wdk;wufedkifonhf wpfckwnf;aom vlhtodkuft0ef; twGufvlwdkif;ü wm0ef &Sdonf/
+        rdrd\ tcGihfta&;rsm;eSihf vGwfvyf cGihfrsm;udk okH;pGJ&mwGif vlwdkif;onf? tjcm;olrsm;\ tcGihfta&;rsm;eSihfvGwfvyfcGihfrsm;udktodtrSwfjykí 
+        &dkaoav;pm;ap&eftvdkhiSm vnf;aumif;? 'Drdkua&pDusihfokH;aom vlhtzGJhtpnf;wGif udk,fusihfw&m;tjyif? &yf&Gmat;csrf;om,ma&;eSihf 
+        jynfolh tusdk; pD;yGm; jzpfxGef;a&;wdkh twGuf? w&m;rsSwpGm usihfaqmif&ef tvdkhiSm vnf;aumif;? Oya'u jyXmef;xm;onhf cskyfcs,frIrsm;jzihfom uehfowfjcif;cH&rnf/
+        tqdkyg tcGihfta&;rsm;eSihf vGwfvyf cGihfrsm;udk rnfonhf trIudpöwGifrsS ukvor*¾\ &nf&G,fcsufrsm;eSihfvnf;aumif;? 
+        tajccHrlrsm;eSihf vnf;aumif; qehfusifí rokH;pGJ&/'''
+        unicode = u'''အပိုဒ် ၂၉
+        မိမိ၏စရိုက်လက္ခဏာ လွတ်လပ်စွာ ဖွံ့ဖြိုး တိုးတက်နိုင်သည့် တစ်ခုတည်းသော လူ့အသိုက်အဝန်း အတွက်လူတိုင်း၌ တာဝန် ရှိသည်။
+        မိမိ၏ အခွင့်အရေးများနှင့် လွတ်လပ် ခွင့်များကို သုံးစွဲရာတွင် လူတိုင်းသည်၊ အခြားသူများ၏ အခွင့်အရေးများနှင့်လွတ်လပ်ခွင့်များကိုအသိအမှတ်ပြု၍ 
+        ရိုသေလေးစားစေရန်အလို့ငှာ လည်းကောင်း၊ ဒီမိုကရေစီကျင့်သုံးသော လူ့အဖွဲ့အစည်းတွင် ကိုယ်ကျင့်တရားအပြင်၊ ရပ်ရွာအေးချမ်းသာယာရေးနှင့် 
+        ပြည်သူ့ အကျိုး စီးပွား ဖြစ်ထွန်းရေးတို့ အတွက်၊ တရားမျှတစွာ ကျင့်ဆောင်ရန် အလို့ငှာ လည်းကောင်း၊ ဥပဒေက ပြဌာန်းထားသည့် ချုပ်ချယ်မှုများဖြင့်သာ ကန့်သတ်ခြင်းခံရမည်။
+        အဆိုပါ အခွင့်အရေးများနှင့် လွတ်လပ် ခွင့်များကို မည်သည့် အမှုကိစ္စတွင်မျှ ကုလသမဂ္ဂ၏ ရည်ရွယ်ချက်များနှင့်လည်းကောင်း၊ 
+        အခြေခံမူများနှင့် လည်းကောင်း ဆန့်ကျင်၍ မသုံးစွဲရ။'''
+        result = win2uni.convert(win)
+        self.assertEqual(unicode, result, "Failed to Convert Article TwentyNine")
+
+    def test_article_thirty(self):
+        win = u'''tydk'f 30
+        þajunmpmwrf;yg tcGihfta&;eSihfwuG vGwfvyfcGihfrsm; ysufpD;&mysufpD;ajumif;wdkhudk&nf&G,fí? edkifiHwpfedkifiH twGuf jzpfap? 
+        vlwpfpktwGuf jzpfap? vlwpfOD;wpfa,muf twGuf jzpfap yg0if aqmif&Guf&ef tcGihf&Sdonf[k aomfvnf;aumif;? 
+        udk,fwdkifaqmif&Guf&ef tcGihf&Sdonf [kaomfvnf;aumif;t"dyÜg,f ydkif;jcm;aumuf,ljcif; r&Sdap&/'''
+        unicode = u'''အပိုဒ် ၃ဝ
+        ဤကြေညာစာတမ်းပါ အခွင့်အရေးနှင့်တကွ လွတ်လပ်ခွင့်များ ပျက်စီးရာပျက်စီးကြောင်းတို့ကိုရည်ရွယ်၍၊ နိုင်ငံတစ်နိုင်ငံ အတွက် ဖြစ်စေ၊ 
+        လူတစ်စုအတွက် ဖြစ်စေ၊ လူတစ်ဦးတစ်ယောက် အတွက် ဖြစ်စေ ပါဝင် ဆောင်ရွက်ရန် အခွင့်ရှိသည်ဟု သော်လည်းကောင်း၊ 
+        ကိုယ်တိုင်ဆောင်ရွက်ရန် အခွင့်ရှိသည် ဟုသော်လည်းကောင်းအဓိပ္ပါယ် ပိုင်းခြားကောက်ယူခြင်း မရှိစေရ။'''
+        result = win2uni.convert(win)
+        self.assertEqual(unicode, result, "Failed to Convert Article Thirty")
 
     def test_myanmar_pangram(self):
         win = u'''oD[dkVfrS ÓPfBuD;½§ifonf tm,k0¹eaq;ñTef;pmudk ZvGefaps;ab;Am'Hyifxuf'''
