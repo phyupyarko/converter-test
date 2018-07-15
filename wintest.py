@@ -199,6 +199,118 @@ class TestWIN2UNI(unittest.TestCase):
         result = win2uni.convert(win)
         self.assertEqual(unicode, result, "Failed to Convert Article Sixteen")
 
+    def test_article_eighteen(self):
+        win = u'''tydk'f 18
+        vlwdkif;wGif vGwfvyfpGm awG;ac: juHqedkifcGihf? vGwfvyfpGm cH,l&yfwnfedkifcGihf eSihf vGwfvyfpGm ouf0if udk;uG,fedkifcGihf&Sdonf/ 
+        tqdkyg tcGihfta&;rsm;ü rdrdudk;uG,fonhf bmomudk odkhwnf;r[kwf ouf0if,kHjunfcsufudk vGwfvyfpGm ajymif;vJedkifcGihf yg0ifonhf tjyif 
+        rdrd wpfa,mufcsif;jzpfap? tjcm;olrsm;eSihf pkaygif;íjzpfap? jynfoltrsm; a&SharSmufwGif aomfvnf;aumif;? a&SharSmufwGif r[kwfbJ aomfvnf;aumif;? rdrd udk;uG,faom bmomudk 
+        odkhwnf;r[kwf ouf0if ,kHjunfcsufudk vGwfvyf pGm oifjyedkifcGihf? usihfokH;edkifcGihf? 0wfjykudk;uG,fedkifcGihfeSihf aqmufwnf edkifcGihfwdkhvnf; yg0ifonf/'''
+        unicode = u'''အပိုဒ် ၁၈
+        လူတိုင်းတွင် လွတ်လပ်စွာ တွေးခေါ် ကြံဆနိုင်ခွင့်၊ လွတ်လပ်စွာ ခံယူရပ်တည်နိုင်ခွင့် နှင့် လွတ်လပ်စွာ သက်ဝင် ကိုးကွယ်နိုင်ခွင့်ရှိသည်။ 
+        အဆိုပါ အခွင့်အရေးများ၌ မိမိကိုးကွယ်သည့် ဘာသာကို သို့တည်းမဟုတ် သက်ဝင်ယုံကြည်ချက်ကို လွတ်လပ်စွာ ပြောင်းလဲနိုင်ခွင့် ပါဝင်သည့် အပြင် 
+        မိမိ တစ်ယောက်ချင်းဖြစ်စေ၊ အခြားသူများနှင့် စုပေါင်း၍ဖြစ်စေ၊ ပြည်သူအများ ရှေ့မှောက်တွင် သော်လည်းကောင်း၊ ရှေ့မှောက်တွင် မဟုတ်ဘဲ သော်လည်းကောင်း၊ မိမိ ကိုးကွယ်သော ဘာသာကို 
+        သို့တည်းမဟုတ် သက်ဝင် ယုံကြည်ချက်ကို လွတ်လပ် စွာ သင်ပြနိုင်ခွင့်၊ ကျင့်သုံးနိုင်ခွင့်၊ ဝတ်ပြုကိုးကွယ်နိုင်ခွင့်နှင့် ဆောက်တည် နိုင်ခွင့်တို့လည်း ပါဝင်သည်။'''
+        result = win2uni.convert(win)
+        self.assertEqual(unicode, result, "Failed to Convert Article Eighteen")
+
+    def test_article_nineteen(self):
+        win = u'''tydk'f 19
+        vlwdkif;wGif vGwfvyfpGm xifjrif ,lqedkifcGihfeSihf vGwfvyfpGm zGihf[ azmfjyedkifcGihf&Sdonf/ tqdkyg tcGihfta&;rsm;ü taeSmihf t,Sufr&SdbJ vGwfvyfpGm xifjrif,lqedkifcGihf yg0if onhftjyif? 
+        edkifiHe,fedrdwfrsm;udk axmufxm;&ef rvdkbJ owif;tajumif;t&meSihf oabmw&m;rsm;udk wenf;enf; jzihf vGwfvyfpGm &Sm,lqnf;yl;edkifcGihf? vufcHedkifcGihfeSihf a0iS jzehfcsdcGihfwdkhvnf; yg0ifonf/'''
+        unicode = u'''အပိုဒ် ၁၉
+        လူတိုင်းတွင် လွတ်လပ်စွာ ထင်မြင် ယူဆနိုင်ခွင့်နှင့် လွတ်လပ်စွာ ဖွင့်ဟ ဖော်ပြနိုင်ခွင့်ရှိသည်။ အဆိုပါ အခွင့်အရေးများ၌ အနှောင့် အယှက်မရှိဘဲ လွတ်လပ်စွာ ထင်မြင်ယူဆနိုင်ခွင့် ပါဝင် သည့်အပြင်၊ 
+        နိုင်ငံနယ်နိမိတ်များကို ထောက်ထားရန် မလိုဘဲ သတင်းအကြောင်းအရာနှင့် သဘောတရားများကို တနည်းနည်း ဖြင့် လွတ်လပ်စွာ ရှာယူဆည်းပူးနိုင်ခွင့်၊ လက်ခံနိုင်ခွင့်နှင့် ဝေငှ ဖြန့်ချိခွင့်တို့လည်း ပါဝင်သည်။'''
+        result = win2uni.convert(win)
+        self.assertEqual(unicode, result, "Failed to Convert Article Nineteen")
+
+    def test_article_twenty(self):
+        win = u'''tydk'f 20
+        vlwdkif;wGif vGwfvyf at;csrf;pGm pka0;edkifcGihf eSihf zGJhpnf;edkifcGihf wdkh &Sdonf/
+        rnfolhudkrsS tzGJhtpnf;wpfckodkh 0ifap&ef twif;tusyfrjyk&/'''
+        unicode = u'''အပိုဒ် ၂ဝ
+        လူတိုင်းတွင် လွတ်လပ် အေးချမ်းစွာ စုဝေးနိုင်ခွင့် နှင့် ဖွဲ့စည်းနိုင်ခွင့် တို့ ရှိသည်။
+        မည်သူ့ကိုမျှ အဖွဲ့အစည်းတစ်ခုသို့ ဝင်စေရန် အတင်းအကျပ်မပြုရ။'''
+        result = win2uni.convert(win)
+        self.assertEqual(unicode, result, "Failed to Convert Article Twenty")
+
+    def test_article_twentyone(self):
+        win = u'''tydk'f 21
+        vlwdkif;wGif rdrdedkifiH\ tkyfcskyfa&;ü udk,fwdkifjzpfap? vGwfvyfpGm a&G;cs,fvdkufonhf udk,fpm;vS,frsm;rS wpfqihfjzpfap yg0if aqmif&GufedkifcGihf &Sdonf/
+        vlwdkif;wGif rdrd\edkifiH&Sd jynfolh 0efxrf;tzGJhü 0ifa&mufedkif&ef wlnDonhf tcGihf ta&;&Sdonf/
+        jynfoljynfom;wdkh\ qe´onf tkyfcskyf tmPm\ tajccHjzpf&rnf? tqdkyg qe´udk tcsdefumvydkif;jcm;vsuf ppfrSefaoma&G;aumufyGJrsm;jzihf xif&Sm;ap&rnf/ 
+        a&G;aumuf yGJrsm;wGifvnf; vlwdkif;tnDtrsS qe´rJ ay;edkifcGihf &Sd&rnhftjyif ? xdka&G;aumufyGJrsm;udk vsSdkh0Suf rJay; pepfjzihf jzpfap? 
+        tvm;wl vGwfvyfaom rJay;pepf jzihfjzpfap usif;y&rnf/'''
+        unicode = u'''အပိုဒ် ၂၁
+        လူတိုင်းတွင် မိမိနိုင်ငံ၏ အုပ်ချုပ်ရေး၌ ကိုယ်တိုင်ဖြစ်စေ၊ လွတ်လပ်စွာ ရွေးချယ်လိုက်သည့် ကိုယ်စားလှယ်များမှ တစ်ဆင့်ဖြစ်စေ ပါဝင် ဆောင်ရွက်နိုင်ခွင့် ရှိသည်။
+        လူတိုင်းတွင် မိမိ၏နိုင်ငံရှိ ပြည်သူ့ ဝန်ထမ်းအဖွဲ့၌ ဝင်ရောက်နိုင်ရန် တူညီသည့် အခွင့် အရေးရှိသည်။
+        ပြည်သူပြည်သားတို့၏ ဆန္ဒသည် အုပ်ချုပ် အာဏာ၏ အခြေခံဖြစ်ရမည်၊ အဆိုပါ ဆန္ဒကို အချိန်ကာလပိုင်းခြားလျက် စစ်မှန်သောရွေးကောက်ပွဲများဖြင့် ထင်ရှားစေရမည်။ 
+        ရွေးကောက် ပွဲများတွင်လည်း လူတိုင်းအညီအမျှ ဆန္ဒမဲ ပေးနိုင်ခွင့် ရှိရမည့်အပြင် ၊ ထိုရွေးကောက်ပွဲများကို လျှို့ဝှက် မဲပေး စနစ်ဖြင့် ဖြစ်စေ၊ 
+        အလားတူ လွတ်လပ်သော မဲပေးစနစ် ဖြင့်ဖြစ်စေ ကျင်းပရမည်။'''
+        result = win2uni.convert(win)
+        self.assertEqual(unicode, result, "Failed to Convert Article TwentyOne")
+
+    def test_article_twentytwo(self):
+        win = u'''tydk'f 22
+        vlwdkif;wGif vlhtzGJhtpnf;\ tzGJh0ifwpfOD;taeeSihf vlrIa&;vkHjckHcGihf&,lydkihfcGihf&Sdonhf tjyifedkifiHa&; judk;
+        yrf;rIjzihfjzpfap? edkifiHwum ylaygif;aqmif&GufrIjzihfjzpfap? 
+        edkifiHtoD;oD;\zGJhpnf;ykHeSihf vnf;aumif;? o,HZmw tiftm;eSihfvnf;aumif; xdkvl\ *kPfodu©meSihf p&dkufvu©Pm vGwfvyfpGm 
+        wdk;wufjrihfrm;a&;twGuf r&Sdrjzpfvdktyfaom pD;yGm;a&;?vlrIa&;eSihf ,Úfaus;rI tcGihfta&;rsm;udk okH;pGJydkifcGihf&Sdonf/'''
+        unicode = u'''အပိုဒ် ၂၂
+        လူတိုင်းတွင် လူ့အဖွဲ့အစည်း၏ အဖွဲ့ဝင်တစ်ဦးအနေနှင့် လူမှုရေးလုံခြုံခွင့်ရယူပိုင့်ခွင့်ရှိသည့် အပြင်နိုင်ငံရေး ကြိုး
+        ပမ်းမှုဖြင့်ဖြစ်စေ၊ နိုင်ငံတကာ ပူပေါင်းဆောင်ရွက်မှုဖြင့်ဖြစ်စေ၊ 
+        နိုင်ငံအသီးသီး၏ဖွဲ့စည်းပုံနှင့် လည်းကောင်း၊ သယံဇာတ အင်အားနှင့်လည်းကောင်း ထိုလူ၏ ဂုဏ်သိက္ခာနှင့် စရိုက်လက္ခဏာ လွတ်လပ်စွာ 
+        တိုးတက်မြင့်မားရေးအတွက် မရှိမဖြစ်လိုအပ်သော စီးပွားရေး၊လူမှုရေးနှင့် ယဉ်ကျေးမှု အခွင့်အရေးများကို သုံးစွဲပိုင်ခွင့်ရှိသည်။'''
+        result = win2uni.convert(win)
+        self.assertEqual(unicode, result, "Failed to Convert Article TwentyTwo")
+
+    def test_article_twentythree(self):
+        win = u'''tydk'f 23
+        vlwdkif;wGif tvkyfvkyf &efvnf;aumif;? rdrdeSpfouf&m toufarG;rI tvkyf tudkifudk vGwfvyfpGma&G;cs,f&ef vnf;aumif;? w&m;rsSwí 
+        vkyfaysmfaom tvkyfcGif\ tajctaeudk &&Sd&ef vnf;aumif;? tvkyfvufrJh jzpf&jcif;rS tumtuG,f &&Sd&ef vnf;aumif; tcGihfta&;&Sdonf/
+        vlwdkif;wGif cGJjcm;jcif;rcH&apbJ? wlnDaom tvkyftwGuf wlnDaom tcaju;aiG &ydkifcGihf&Sdonf/
+        tvkyfvkyfudkifonhf vlwdkif;wGif? rdrdeSihf rdrd\ rdom;pktwGuf vlh*kPfodu©m eSihf nDatmif aexdkif pm;aomufedkif&ef? 
+        pdwfcsavmufonhfjyif? w&m; rsSwí vkyfaysmfonhf vpmaju;aiG &ydkifcGihf&Sdonf/ vdktyfcJhvsSiftjcm; enf;vrf;rsm;rS vlrIa&; taxmuftyHhudkvnf; xyfrHí &ydkifcGihf &Sdonf/
+        vlwdkif;wGif rdrdtusdk; cHpm;cGihfudk umuG,f&ef tvkyform; tpnf;t&kH;rsm; zGJhpnf;cGihf ? yg0if aqmif&GufcGihf &Sdonf/'''
+        unicode = u'''အပိုဒ် ၂၃
+        လူတိုင်းတွင် အလုပ်လုပ် ရန်လည်းကောင်း၊ မိမိနှစ်သက်ရာ အသက်မွေးမှု အလုပ် အကိုင်ကို လွတ်လပ်စွာရွေးချယ်ရန် လည်းကောင်း၊ တရားမျှတ၍ 
+        လုပ်ပျော်သော အလုပ်ခွင်၏ အခြေအနေကို ရရှိရန် လည်းကောင်း၊ အလုပ်လက်မဲ့ ဖြစ်ရခြင်းမှ အကာအကွယ် ရရှိရန် လည်းကောင်း အခွင့်အရေးရှိသည်။
+        လူတိုင်းတွင် ခွဲခြားခြင်းမခံရစေဘဲ၊ တူညီသော အလုပ်အတွက် တူညီသော အခကြေးငွေ ရပိုင်ခွင့်ရှိသည်။
+        အလုပ်လုပ်ကိုင်သည့် လူတိုင်းတွင်၊ မိမိနှင့် မိမိ၏ မိသားစုအတွက် လူ့ဂုဏ်သိက္ခာ နှင့် ညီအောင် နေထိုင် စားသောက်နိုင်ရန်၊ 
+        စိတ်ချလောက်သည့်ပြင်၊ တရား မျှတ၍ လုပ်ပျော်သည့် လစာကြေးငွေ ရပိုင်ခွင့်ရှိသည်။ လိုအပ်ခဲ့လျှင်အခြား နည်းလမ်းများမှ လူမှုရေး အထောက်အပံ့ကိုလည်း ထပ်မံ၍ ရပိုင်ခွင့် ရှိသည်။
+        လူတိုင်းတွင် မိမိအကျိုး ခံစားခွင့်ကို ကာကွယ်ရန် အလုပ်သမား အစည်းအရုံးများ ဖွဲ့စည်းခွင့် ၊ ပါဝင် ဆောင်ရွက်ခွင့် ရှိသည်။'''
+        result = win2uni.convert(win)
+        self.assertEqual(unicode, result, "Failed to Convert Article TwentyThree")
+
+    def test_article_twentyfour(self):
+        win = u'''tydk'f 24
+        vlwdkif;wGif oihfjrwfavsmfuefpGm uehfowfxm;onhf tvkyfvkyfcsdef tjyif? vpmeSihfwuG tcgumvtm;avsmfpGm owfrSwf 
+        xm;onhf tvkyf tm;vyf&ufrsm;yg0ifonhf tem;,lcGihfeSihf tm;vyfcGihf cHpm;ydkifcGihf &Sdonf/'''
+        unicode = u'''အပိုဒ် ၂၄
+        လူတိုင်းတွင် သင့်မြတ်လျော်ကန်စွာ ကန့်သတ်ထားသည့် အလုပ်လုပ်ချိန် အပြင်၊ လစာနှင့်တကွ အခါကာလအားလျော်စွာ သတ်မှတ် 
+        ထားသည့် အလုပ် အားလပ်ရက်များပါဝင်သည့် အနားယူခွင့်နှင့် အားလပ်ခွင့် ခံစားပိုင်ခွင့် ရှိသည်။'''
+        result = win2uni.convert(win)
+        self.assertEqual(unicode, result, "Failed to Convert Article TwentyFour")
+
+    def test_article_twentyfive(self):
+        win = u'''tydk'f 25
+        vlwdkif;wGif rdrdeSihfwuG rdrd\ rdom;pk usef;rma&;eSihfwuG udk,fpdwfeSpfjzm at;csrf;pGm aexdkifedkifa&; twGuf tpmt[m&? t0wftxnf aetdrf? 
+        aq;0g; tultnDeSihf vdktyfonhf vlrI taxmuftyHhrsm; yg0ifaom oihfawmf avsSmufywfonhf vlrI tqihftwef;udk &,lcHpm;cGihf &Sdonf/ 
+        xdkhjyif tvkyfvufrJhjzpfaom tcgü aomfvnf;aumif;? rusef;rrm jzpfaom tcgü aomfvnf;aumif;? udk,ft*Fg rpGrf; roefjzpfaom tcgü aomfvnf;aumif;? 
+        rkqdk;rjzpfaomtcgü aomfvnf;aumif;? touft&G,ftdkrif;aom tcgü aomfvnf;aumif;? rdrdudk,fwdkifu rwwfedkifaom tajumif;ajumihf 0rf;pm &SmrSD;edkifaom 
+        enf;vrf; r&Sdaom tcgü aomfvnf;aumif;? aexdkifpm;aomufa&;twGuf vkHjckHpdwfcs&rI tcGihfta&;&Sdonf/
+        om;onf rdcifrsm;eSihf uav;rsm;onf txl;apmihfa&Smufjcif;eSihf tultnDay;jcif;udk &cGihf &Sdonf/ 
+        Oya't& xdrf;jrm;jcif;jzihfjzpfap tjcm; enf;jzihf jzpfap arG;zGm;aom uav;tm;vkH; onf wlnDaom vlrI umuG,f apmihfa&Smufa&;udk &,l cHpm;ju&rnf/'''
+        unicode = u'''အပိုဒ် ၂၅
+        လူတိုင်းတွင် မိမိနှင့်တကွ မိမိ၏ မိသားစု ကျန်းမာရေးနှင့်တကွ ကိုယ်စိတ်နှစ်ဖြာ အေးချမ်းစွာ နေထိုင်နိုင်ရေး အတွက် အစာအဟာရ၊ အဝတ်အထည် နေအိမ်၊ 
+        ဆေးဝါး အကူအညီနှင့် လိုအပ်သည့် လူမှု အထောက်အပံ့များ ပါဝင်သော သင့်တော် လျှောက်ပတ်သည့် လူမှု အဆင့်အတန်းကို ရယူခံစားခွင့် ရှိသည်။ 
+        ထို့ပြင် အလုပ်လက်မဲ့ဖြစ်သော အခါ၌ သော်လည်းကောင်း၊ မကျန်းမမာ ဖြစ်သော အခါ၌ သော်လည်းကောင်း၊ ကိုယ်အင်္ဂါ မစွမ်း မသန်ဖြစ်သော အခါ၌ သော်လည်းကောင်း၊ 
+        မုဆိုးမဖြစ်သောအခါ၌ သော်လည်းကောင်း၊ အသက်အရွယ်အိုမင်းသော အခါ၌ သော်လည်းကောင်း၊ မိမိကိုယ်တိုင်က မတတ်နိုင်သော အကြောင်းကြောင့် ဝမ်းစာ ရှာမှီးနိုင်သော 
+        နည်းလမ်း မရှိသော အခါ၌ သော်လည်းကောင်း၊ နေထိုင်စားသောက်ရေးအတွက် လုံခြုံစိတ်ချရမှု အခွင့်အရေးရှိသည်။
+        သားသည် မိခင်များနှင့် ကလေးများသည် အထူးစောင့်ရှောက်ခြင်းနှင့် အကူအညီပေးခြင်းကို ရခွင့် ရှိသည်။ 
+        ဥပဒေအရ ထိမ်းမြားခြင်းဖြင့်ဖြစ်စေ အခြား နည်းဖြင့် ဖြစ်စေ မွေးဖွားသော ကလေးအားလုံး သည် တူညီသော လူမှု ကာကွယ် စောင့်ရှောက်ရေးကို ရယူ ခံစားကြရမည်။'''
+        result = win2uni.convert(win)
+        self.assertEqual(unicode, result, "Failed to Convert Article TwentyFive")
+
     def test_myanmar_pangram(self):
         win = u'''oD[dkVfrS ÓPfBuD;½§ifonf tm,k0¹eaq;ñTef;pmudk ZvGefaps;ab;Am'Hyifxuf'''
         unicode = u'''သီဟိုဠ်မှ ဉာဏ်ကြီးရှင်သည် အာယုဝဍ္ဎနဆေးညွှန်းစာကို ဇလွန်ဈေးဘေးဗာဒံပင်ထက်'''

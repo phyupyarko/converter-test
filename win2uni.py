@@ -102,6 +102,12 @@ def replace(input):
 
 def decompose(input):
     output = input
+
+    output = re.sub(u'([\u1000-\u1021])\u0046', u'\u0046\\1', output)  # up-ngathet
+    output = re.sub(u'([\u1000-\u1021])\u00d0', u'\u0046\\1\u102e', output)  # with-lgtsk
+    output = re.sub(u'([\u1000-\u1021])\u00d8', u'\u0046\\1\u102d', output)  # with-lonegyitin
+    output = re.sub(u'([\u1000-\u1021])\u00f8', u'\u0046\\1\u1036', output)  # with-ttt
+
     output = re.sub(u'\u0070\u0073', u'\u1008', output)  # za-myin-zwe
     output = re.sub(u'\u1005\u103b', u'\u1008', output)  # za-myin-zwe
 
@@ -186,7 +192,6 @@ def decompose(input):
     output = re.sub(u'\u00B2', u'\u1039\u100C', output)
     # htawonbae
 
-
     ###############
 
     output = re.sub(u'\u0040', u'\u100F\u1039\u100D', output)
@@ -200,6 +205,7 @@ def decompose(input):
     # dayin-kaut
 
     return output
+
 
 def visual2logical(input):
     output = input
@@ -219,5 +225,3 @@ def convert(input):
     output = visual2logical(output)
 
     return output
-
-
