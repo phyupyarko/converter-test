@@ -167,9 +167,9 @@ def decompose(input):
     # tatalin
     output = re.sub(u'\u00D6', u'\u1039\u100F', output)
     # na-gyi
-    output = re.sub(u'\u00C5', u'\u1039\u1010', output)
+    output = re.sub(u'[\u00C5\u00E5]', u'\u1039\u1010', output)
     # ta
-    output = re.sub(u'\00AC', u'\u1039\u1011', output)
+    output = re.sub(u'[\u00AC\u00A6]', u'\u1039\u1011', output)
     # hta
     output = re.sub(u'\u00B4', u'\u1039\u1012', output)
     # da-dwe
