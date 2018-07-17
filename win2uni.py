@@ -191,6 +191,8 @@ def decompose(input):
     # la
     output = re.sub(u'\u00B2', u'\u1039\u100C', output)
     # htawonbae
+    output = output.replace(u'\u007C', u'\u100B\u1039\u100C')
+    # htawon
 
     ###############
 

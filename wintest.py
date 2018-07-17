@@ -414,10 +414,16 @@ class TestWIN2UNI(unittest.TestCase):
         self.assertEqual(unicode, result, "Failed to Convert Article Thirty")
 
     def test_myanmar_pangram(self):
-        win = u'''oD[dkVfrS ÓPfBuD;½§ifonf tm,k0¹eaq;ñTef;pmudk ZvGefaps;ab;Am'Hyifxuf'''
-        unicode = u'''သီဟိုဠ်မှ ဉာဏ်ကြီးရှင်သည် အာယုဝဍ္ဎနဆေးညွှန်းစာကို ဇလွန်ဈေးဘေးဗာဒံပင်ထက်'''
+        win = u'''oD[dkVfrS ÓPfBuD;½§ifonf tm,k0¹eaq;ñTef;pmudk ZvGefaps;ab;Am'Hyifxuf t"d|mefvsuf *CePzwfcJhonf/'''
+        unicode = u'''သီဟိုဠ်မှ ဉာဏ်ကြီးရှင်သည် အာယုဝဍ္ဎနဆေးညွှန်းစာကို ဇလွန်ဈေးဘေးဗာဒံပင်ထက် အဓိဋ္ဌာန်လျက် ဂဃနဏဖတ်ခဲ့သည်။'''
         result = win2uni.convert(win)
         self.assertEqual(unicode, result, "Failed converting Article Pangram")
+
+    def test_hta(self):
+        win = '''|'''
+        unicode = '''ဋ္ဌ'''
+        result = win2uni.convert(win)
+        self.assertEqual(unicode, result, "Failed to Convert hta")
 
 
 if __name__ == "__main__":
