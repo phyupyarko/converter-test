@@ -29,6 +29,7 @@ def replace(input):
     output = output.replace(u'\u103e\u103b', u'\u103b\u103e')  # pint-htoe
     output = output.replace(u'\u103d\u103b', u'\u103b\u103d')  # pint-swae
     output = output.replace(u'\u103e\u103d', u'\u103d\u103e')  # swae-htoe
+    output = output.replace(u'\u102f\u103e', u'\u103e\u102f')  # htoe-tachaung
     output = re.sub(u'\u1009\u102c', u'\u00d3', output)  # nyalay-yaecha
 
     ####byee
@@ -129,7 +130,7 @@ def decompose(input):
     output = re.sub(u'\u103e\u102f', u'\u0049', output)  # hahtoe-tachaung
     output = re.sub(u'\u102b\u103a', u'\u003a', output)  # yaecha-shaehtoe
     output = re.sub(u'\u103b\u103e', u'\u0051', output)  # pint-htoe
-    output = re.sub(u'\u103d\u103b', u'\u0052', output)  # pint-swae
+    output = re.sub(u'\u103b\u103d', u'\u0052', output)  # pint-swae
     output = re.sub(u'\u103d\u103e', u'\u0054', output)  # swae-htoe
     output = re.sub(u'\u1000\u103b\u1015\u103a', u'\u0024', output)  # kyat
 
@@ -141,7 +142,7 @@ def decompose(input):
 def virtual2logical(input):
     output = input
     ############yit
-
+    output = re.sub(u'([\u1000-\u1021])(\u103c)([\u102d\u102e\u1036])\u102f', u'\\1\\2\\3\u004b', output)  # yit-byee
     output = re.sub(u'([\u1000-\u1021])((?:[\u103b-\u103e])?)(\u1031)', u'\\3\\1\\2', output)  # pysh-byee-tawai
     output = re.sub(u'([\u1000\u1003\u1006\u100f\u1011\u1018\u101a\u101e\u101f\u1021\u1010])\u103c\u102f', u'\u00ea\\1',
                     output)  # yitgyi-byee-tachaung
@@ -162,8 +163,8 @@ def virtual2logical(input):
     output = re.sub(u'([\u1001\u1002\u1004\u1005\u1007\u1012\u1013\u1015\u1016\u1017\u1019])\u103c\u102f', u'\u00fb\\1', output)  # yitlsy-byee-tachaung
 
     output = re.sub(u'([\u1000-\u1021])(\u103c)', u'\\2\\1', output)  # yit-byee
-    output = re.sub(u'([\u1000-\u1021])(\u103b)\u102f', u'\\1\\2\u004b', output)  # pint-byee-tachaung
-    output = re.sub(u'([\u1000-\u1021])(\u103b)\u1030', u'\\1\\2\u004c', output)  # pint-byee-tachaung
+    output = re.sub(u'([\u1000-\u1021])(\u103b)((?:[\u102d\u102e\u1036])?)\u102f', u'\\1\\2\\3\u004b', output)  # pint-byee-tachaung
+    output = re.sub(u'([\u1000-\u1021])(\u103b)((?:[\u102d\u102e\u1036])?)\u1030', u'\\1\\2\\3\u004c', output)  # pint-byee-tachaung
     return output
 def shape(input):
     output=input
@@ -173,6 +174,18 @@ def shape(input):
     output = re.sub(
         u'([\u00fa\u00a9\u00be\u00a2\u00f6\u00e4\u00c6\u00d1\u00b3\u00b2\u00d6\u00c5\u00a6\u00b4\u00a8\u00e9\u00dc\u00e6\u00c1\u00c7\u00ae])'
         u'((?:[\u0064\u0044\u0048])?)\u006c', u'\\1\\2\u004c', output)  # sint-tin-nachaung
+    ############na-nge
+    output = re.sub(u'\u0065((?:[\u0064\u0044\u0048])?)([\u0047\u0053\u0049\u0054\u006b\u006c])', u'\u0045\\1\\2', output)  # nga-tat-kha
+    ############out-myit
+    output = re.sub(u'(\u0065)\u0068', u'\\1\u0059', output)  # na-outmyit
+    output = re.sub(u'([\u006c\u0047])\u0068', u'\\1\u0059', output)  #nachaung-swae-outmyit
+    output = re.sub(u'(\u0064\u006b)\u0068', u'\\1\u0059', output)  # lone-tin-tachaung-outmyit
+    output = re.sub(u'([\u00fa\u00a9\u00be\u00a2\u00f6\u00e4\u00c6\u00b3\u00b2\u00d6\u00c5\u00a6\u00b4\u00a8\u00ea\u00dc\u00e6\u00c1\u00c7\u00ae])\u0068', u'\\1\u0055', output)  # lone-tin-tachaung-outmyit
+    output = re.sub(u'(\u0049)(\u0048)\u0068', u'\\1\\2\u0055', output)  # tachung-outmyit
+    output = re.sub(u'(\u0047)([\u004a\u0048])\u0068', u'\\1\\2\u0059', output)  # na-outmyit
+    ###########nya
+    output = re.sub(u'\u006e([\u0047\u0053\u0054])', u'\u00f1\\1', output)  # nga-tat-kha
+
     #################nga-tat
     output = re.sub(u'\u0069\u0066\u00fa', u'\u0075\u0046', output)  # nga-tat-kha
     output = re.sub(u'\u0069\u0066\u00a9', u'\u0063\u0046', output)  # nga-tat-ka
@@ -199,7 +212,7 @@ def shape(input):
     output = re.sub(u'\u0046\u0064', u'\u00d8', output)  # lontin-ngatat
     output = re.sub(u'\u0046\u0048', u'\u00f8', output)  # ttt-ngatat
     output = re.sub(u'\u0046\u0044', u'\u00d0', output)  # sankat-ngatat
-    output = re.sub(u'\u0069\u0066\u006f', u'\u006f\u0046', output)  # sankat-ngatat
+
     return output
 def convert(input):
     output = input
