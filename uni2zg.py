@@ -23,6 +23,10 @@ def convert(input):
     wa = u'\u103D'
     ha = u'\u103E'
     zero = u'\u1040'
+    i=0
+    byee=[u'\u1000',u'\u1001',u'\u1002',u'\u1003',u'\u1005',u'\u1006',u'\u1007',u'\u1008',u'\u100b',u'\u100c',u'\u100f',u'\u1010',u'\u1011',u'\u1012',u'\u1013',u'\u1014',u'\u1015',u'\u1016',u'\u1017',u'\u1018',u'\u1019',u'\u101c']
+    byeesint=[u'\u1060',u'\u1061',u'\u1062',u'\u1063',u'\u1065',u'\u1066',u'\u1068',u'\u1069',u'\u106b',u'\u106d',u'\u1070',u'\u1071',u'\u1073',u'\u1075',u'\u1076',u'\u1077',u'\u1078',u'\u1079',u'\u107a',u'\u107b',u'\u107c',u'\u1085']
+
  #---------------------------------------------------------------------------------------
     output = input
     output = output.replace(u'\u100b\u1039\u100c', u'\u1092')
@@ -119,6 +123,8 @@ def convert(input):
     output = re.sub(u'([\u1000-\u1021])([\u108A])(\u1031)', u"\\3\\1\\2", output)#tawai-byee-swae-htoe
     output = re.sub(u'([\u1000-\u1021])(\u103A)(\u103D)(\u1031)', u"\\4\\1\\2\\3", output)  # tawai-yapint-byee
     output = re.sub(u'\u1014([\u1070-\u107c])', u'\u108f\\1', output)
+    # while(True):
+    #     output = re.sub(([\u1070-\u107c])', u'\u108f\\1', output)
 #-------------------------------out myit-------------------------------------------------------------------------------
     output = re.sub(u'\u1030\u1037', u'\u1030\u1094', output)  # out-myit nachaung
     output = re.sub(u'\u103C\u1037', u'\u103C\u1095', output)  # out-myit waswae
@@ -204,5 +210,6 @@ def convert(input):
     output = re.sub(u'\u100a(\u108a)', u'\u106b\\1', output)  # nya-swae-htoe
     output = re.sub(u'(\u1036)(\u102f)', u'\\2\\1', output)
     output = re.sub(u'\u1025([\u1065\u1068])', u'\u106a\\1', output)
+    output = re.sub(u'(\u108f)(\u1075)\u103b', u'\u1081\\1\\2', output)
 
     return output

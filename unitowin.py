@@ -3,7 +3,6 @@ import re
 def replace(input):
     output = input
     output = output.replace(u'\u104f', u'\u005c')
-
     output = output.replace(u'\u1039\u1000', u'\u00fa')  # ka sint
     output = output.replace(u'\u1039\u1001', u'\u00a9')  # kha sint
     output = output.replace(u'\u1039\u1002', u'\u00be')  # ga sint
@@ -26,12 +25,8 @@ def replace(input):
     output = output.replace(u'\u1039\u1018', u'\u00c7')  # ba sint
     output = output.replace(u'\u1039\u1019', u'\u00ae')  # ma sint
     output = output.replace(u'\u1039\u101c', u'\u2019')  # la sint
-    output = output.replace(u'\u103e\u103b', u'\u103b\u103e')  # pint-htoe
-    output = output.replace(u'\u103d\u103b', u'\u103b\u103d')  # pint-swae
-    output = output.replace(u'\u103e\u103d', u'\u103d\u103e')  # swae-htoe
-    output = output.replace(u'\u102f\u103e', u'\u103e\u102f')  # htoe-tachaung
     output = re.sub(u'\u1009\u102c', u'\u00d3', output)  # nyalay-yaecha
-
+    output = re.sub(u'\u1014', u'\u0065', output)  # na
     ####byee
     output = re.sub(u'\u1000', u'\u0075', output)  # ka
     output = re.sub(u'\u1001', u'\u0063', output)  # kha
@@ -68,7 +63,7 @@ def replace(input):
     output = re.sub(u'\u101e', u'\u006f', output)  # tha
     output = re.sub(u'\u101f', u'\u005b', output)  # ha
     output = re.sub(u'\u1020', u'\u0056', output)  # la-gyi
-    output = re.sub(u'\u1021', u'\u0074', output)  # art
+    output = re.sub(u'\u1021', u'\u0074', output)  # la-gyi
 
     ############number
     output = re.sub(u'\u1040', u'\u0030', output)  # 0
@@ -122,16 +117,21 @@ def replace(input):
     return output
 def decompose(input):
     output = input
-
+    output = output.replace(u'\u103e\u103b', u'\u103b\u103e')  # pint-htoe
+    output = output.replace(u'\u103d\u103b', u'\u103b\u103d')  # pint-swae
+    output = output.replace(u'\u103e\u103d', u'\u103d\u103e')  # swae-htoe
+    output = output.replace(u'\u102f\u103e', u'\u103e\u102f')  # htoe-tachaung
+    output = output.replace(u'\u103c\u103e', u'\u103e\u103c')  # yit-htoe
+    output = re.sub(u'\u103d\u103e', u'\u0054', output)  # swae-htoe
     output = re.sub(u'\u100d\u1039\u100e', u'\u00b9', output)
     output = re.sub(u'\u103e\u102f', u'\u0049', output)  # hote-tachaung
     output = re.sub(u'\u103e\u1030', u'\u00aa', output)  # hote-nachaung
-
+    output = re.sub(u'\u103e(\u103c)', u'\u00a7\\1', output)  # hote-thae
     output = re.sub(u'\u103e\u102f', u'\u0049', output)  # hahtoe-tachaung
     output = re.sub(u'\u102b\u103a', u'\u003a', output)  # yaecha-shaehtoe
     output = re.sub(u'\u103b\u103e', u'\u0051', output)  # pint-htoe
     output = re.sub(u'\u103b\u103d', u'\u0052', output)  # pint-swae
-    output = re.sub(u'\u103d\u103e', u'\u0054', output)  # swae-htoe
+
     output = re.sub(u'\u1000\u103b\u1015\u103a', u'\u0024', output)  # kyat
 
     output = re.sub(u'\u1026', u'\u004f\u0044', output)  # uuu
@@ -141,9 +141,11 @@ def decompose(input):
 
 def virtual2logical(input):
     output = input
+
     ############yit
     output = re.sub(u'([\u1000-\u1021])(\u103c)([\u102d\u102e\u1036])\u102f', u'\\1\\2\\3\u004b', output)  # yit-byee
     output = re.sub(u'([\u1000-\u1021])((?:[\u103b-\u103e])?)(\u1031)', u'\\3\\1\\2', output)  # pysh-byee-tawai
+    output = re.sub(u'([\u1000-\u1021])(\u0054)(\u1031)', u'\\3\\1\\2', output)  # pysh-byee-tawai
     output = re.sub(u'([\u1000\u1003\u1006\u100f\u1011\u1018\u101a\u101e\u101f\u1021\u1010])\u103c\u102f', u'\u00ea\\1',
                     output)  # yitgyi-byee-tachaung
 
@@ -174,18 +176,26 @@ def shape(input):
     output = re.sub(
         u'([\u00fa\u00a9\u00be\u00a2\u00f6\u00e4\u00c6\u00d1\u00b3\u00b2\u00d6\u00c5\u00a6\u00b4\u00a8\u00e9\u00dc\u00e6\u00c1\u00c7\u00ae])'
         u'((?:[\u0064\u0044\u0048])?)\u006c', u'\\1\\2\u004c', output)  # sint-tin-nachaung
+    output = re.sub(
+        u'(\u0051)((?:[\u0064\u0044\u0048])?)\u006b\u0068', u'\\1\\2\u004b\u0055', output)  # pinthtoe-tachaung
+    output = re.sub(
+        u'(\u0051)((?:[\u0064\u0044\u0048])?)\u006c', u'\\1\\2\u004c', output)  # pinthtoe-nachaung
     ############na-nge
     output = re.sub(u'\u0065((?:[\u0064\u0044\u0048])?)([\u0047\u0053\u0049\u0054\u006b\u006c])', u'\u0045\\1\\2', output)  # nga-tat-kha
+    output = re.sub(u'\u0065([\u00fa\u00a9\u00be\u00a2\u00f6\u00e4\u00c6\u00b3\u00b2\u00d6\u00c5\u00a6\u00b4\u00a8\u00ea\u00dc\u00e6\u00c1\u00c7\u00ae])((?:[\u0064\u0044\u0048])?)', u'\u0045\\1\\2',
+                    output)  # nga-tat-kha
     ############out-myit
     output = re.sub(u'(\u0065)\u0068', u'\\1\u0059', output)  # na-outmyit
-    output = re.sub(u'([\u006c\u0047])\u0068', u'\\1\u0059', output)  #nachaung-swae-outmyit
+    output = re.sub(u'([\u006c\u0047\u0054\u0053])\u0068', u'\\1\u0059', output)  #nachaung-swae-outmyit
     output = re.sub(u'(\u0064\u006b)\u0068', u'\\1\u0059', output)  # lone-tin-tachaung-outmyit
     output = re.sub(u'([\u00fa\u00a9\u00be\u00a2\u00f6\u00e4\u00c6\u00b3\u00b2\u00d6\u00c5\u00a6\u00b4\u00a8\u00ea\u00dc\u00e6\u00c1\u00c7\u00ae])\u0068', u'\\1\u0055', output)  # lone-tin-tachaung-outmyit
     output = re.sub(u'(\u0049)(\u0048)\u0068', u'\\1\\2\u0055', output)  # tachung-outmyit
     output = re.sub(u'(\u0047)([\u004a\u0048])\u0068', u'\\1\\2\u0059', output)  # na-outmyit
     ###########nya
-    output = re.sub(u'\u006e([\u0047\u0053\u0054])', u'\u00f1\\1', output)  # nga-tat-kha
-
+    output = re.sub(u'\u006e([\u0047\u0054])', u'\u00f1\\1', output)  # nga-tat-kha
+    output = re.sub(u'(\u006e)\u0053', u'\\1\u00a7', output)  # nga-tat-kha
+    ###########ya
+    output = re.sub(u'\u0026((?:[\u0064\u0044\u0048])?)([\u0047\u0049\u0053\u0054\u006b\u006c])', u'\u00bd\\1\\2', output)  # nga-tat-kha
     #################nga-tat
     output = re.sub(u'\u0069\u0066\u00fa', u'\u0075\u0046', output)  # nga-tat-kha
     output = re.sub(u'\u0069\u0066\u00a9', u'\u0063\u0046', output)  # nga-tat-ka
@@ -216,8 +226,8 @@ def shape(input):
     return output
 def convert(input):
     output = input
-    output = virtual2logical(output)
     output = decompose(output)
+    output = virtual2logical(output)
     output = replace(output)
     output = shape(output)
 
