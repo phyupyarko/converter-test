@@ -2,10 +2,11 @@
 import re
 
 
-
 def replace(input):
     output = input
+
     output = output.replace(u'\u106A', u'\u1009')
+
     #  nyalay
 
     output = output.replace(u'\u1033', u'\u102F')
@@ -35,6 +36,7 @@ def replace(input):
     output = output.replace(u'\u103A', u'\u103B')
     output = output.replace(u'\u107D', u'\u103B')
     #  yapint
+
     output = output.replace(u'\u106B', u'\u100A')
     #  nya
 
@@ -52,20 +54,23 @@ def replace(input):
 
     output = output.replace(u'\u1039', u'\u103A')
     # athet
-
     output = output.replace(u'\u1094', u'\u1037')
     output = output.replace(u'\u1095', u'\u1037')
     # out-kamyit
     output = output.replace(u'\u1086', u'\u103F')
     #  thagyi
-
     return output
+
 
 def decompose(input):
     output = input
-
     output = re.sub(u'([\u1000-\u1021])\u1064', u'\u1064\\1', output)
+    output = re.sub(u'([\u1000-\u1021])\u108B', u'\u1064\\1\u102D', output)  # upngathet-lgt
+    output = re.sub(u'([\u1000-\u1021])\u108C', u'\u1064\\1\u102E', output)  # upngathet-lgtsk
+    output = re.sub(u'([\u1000-\u1021])\u108D', u'\u1064\\1\u1036', output)  # upngathet-lgt-ttt
+    output = re.sub(u'([\u1000-\u1021])\u1064\u1037\u1031', u'\u1064\\1\u1031\u1037', output)
 
+    output = re.sub(u'([\u1000-\u1021])\u103B\u1064', u'\u1064\\1\u103B\u1036', output)
     output = re.sub(u'\u1064', u'\u1004\u103A\u1039', output)
     # up-ngathet
     output = re.sub(u'\u104E', u'\u104E\u1004\u103A\u1038', output)
@@ -84,12 +89,11 @@ def decompose(input):
     #  lgt-ttt
     output = re.sub(u'\u108B', u'\u1004' + u'\u103A' + u'\u1039' + u'\u102D', output)
     # ngathet-lgt
-    output = re.sub(u'\u108B', u'\u1004' + u'\u103A' + u'\u1039' + u'\u102E', output)
+    output = re.sub(u'\u108C', u'\u1004' + u'\u103A' + u'\u1039' + u'\u102E', output)
     #  ngathet-lgtsk
-    output = re.sub(u'\u108B', u'\u1004' + u'\u103A' + u'\u1039' + u'\u1036', output)
+    output = re.sub(u'\u108D', u'\u1004' + u'\u103A' + u'\u1039' + u'\u1036', output)
     #  ngathet-ttt
     output = re.sub(u'\u1025(?=[\u103a\u102c])', u'\u1009', output)
-
 
     ######  pat-sint
 
@@ -153,15 +157,12 @@ def decompose(input):
     return output
 
 
-
-
-
 def visual2logical(input):
     output = input
+
     output = re.sub(
         u'((?:\u1031)?)((?:\u103c)?)([\u1000-\u1021])((?:\u103b)?)((?:\u103d)?)((?:\u103e)?)((?:\u1037)?)((?:\u102c)?)',
         '\\3\\2\\4\\5\\6\\1\\7\\8', output)
-
     return output
 
 
@@ -173,6 +174,3 @@ def convert(input):
     output = visual2logical(output)
 
     return output
-
-
-
