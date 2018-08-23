@@ -69,6 +69,8 @@ def replace(input):
 
     ###################
 
+    output = output.replace(u'\u0024', u'\u1000\u103b\u1015\u103a')  # kyat_sign
+
     output = output.replace(u'\u0067', u'\u102B')  # yay-char
     output = output.replace(u'\u006D', u'\u102C')  # yay-char-ato
     output = output.replace(u'\u0064', u'\u102D')  # lone-gyi-tin
@@ -213,8 +215,8 @@ def visual2logical(input):
     output = input
 
     output = re.sub(
-        u'((?:\u1031)?)((?:\u103c)?)([\u1000-\u1021])((?:\u103b)?)((?:\u103d)?)((?:\u103e)?)((?:\u1037)?)((?:\u102c)?)',
-        '\\3\\2\\4\\5\\6\\1\\7\\8', output)
+        u'((?:\u1031)?)((?:\u103c)?)((?:\u0046)?)([\u1000-\u1021])((?:\u1039[\u1000-\u1021])?)((?:\u103b)?)((?:\u103d)?)((?:\u103e)?)((?:\u1037)?)((?:\u102c)?)',
+        '\\3\\4\\5\\2\\6\\7\\8\\1\\9\\10', output)
 
     return output
 
