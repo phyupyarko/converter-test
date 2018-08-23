@@ -113,8 +113,6 @@ def decompose(input):
     output = re.sub(u'\u0070\u0073', u'\u1008', output)  # za-myin-zwe
     output = re.sub(u'\u1005\u103b', u'\u1008', output)  # za-myin-zwe
 
-    output = re.sub(u'\u0046', u'\u1004\u103A\u1039', output)
-    # up-ngathet
     output = re.sub(u'\u003A', u'\u102B' + u'\u103A', output)
     #  yaychar-htoe
     output = re.sub(u'\u0054', u'\u103D' + u'\u103E', output)
@@ -217,6 +215,8 @@ def visual2logical(input):
     output = re.sub(
         u'((?:\u1031)?)((?:\u103c)?)((?:\u0046)?)([\u1000-\u1021])((?:\u1039[\u1000-\u1021])?)((?:\u103b)?)((?:\u103d)?)((?:\u103e)?)((?:\u1037)?)((?:\u102c)?)',
         '\\3\\4\\5\\2\\6\\7\\8\\1\\9\\10', output)
+    output = re.sub(u'\u0046', u'\u1004\u103A\u1039', output)
+    # up-ngathet
 
     return output
 
